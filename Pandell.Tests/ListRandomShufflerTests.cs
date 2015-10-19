@@ -13,14 +13,14 @@ namespace Pandell.Tests
         public void RandomShufflerHandleEmptyList()
         {
             var list = new List<int>(10);
-            ListRandomShuffler.InPlaceSuffle(list);
+            ListRandomShuffler.InPlaceShuffle(list);
         }
 
         [Test]
         public void RandomShufflerHandleZeroSizeList()
         {
             var list = new List<int>();
-            ListRandomShuffler.InPlaceSuffle(list);
+            ListRandomShuffler.InPlaceShuffle(list);
         }
 
         [Test]
@@ -29,7 +29,7 @@ namespace Pandell.Tests
             int listSize = 10000;
             var list = Enumerable.Range(1, listSize).ToList();
             var listClone = new List<int>(list);
-            ListRandomShuffler.InPlaceSuffle(list);
+            ListRandomShuffler.InPlaceShuffle(list);
 
             var dupCount = list.Intersect(listClone).ToList().Count;
             Assert.AreEqual(dupCount, listSize);
