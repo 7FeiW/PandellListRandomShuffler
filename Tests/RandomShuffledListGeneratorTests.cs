@@ -1,5 +1,5 @@
 ﻿using NUnit.Framework;
-using Pandell.ListShuffler;
+using Pandell.ListShufflers;
 using System.Linq;
 
 namespace Pandell.Tests

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Pandell.ListShuffler
+namespace Pandell.ListShufflers
 {
     /// <summary>
     /// A List Random Shuffler

@@ -1,7 +1,7 @@
 ﻿using System;
-using Pandell.ListShuffler;
+using Pandell.ListShufflers;
 
-namespace Pandell
+namespace Pandell.RandomShuffledListGeneratorDemo
 {
     class Program
     {

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
-using Pandell.ListShuffler;
+using Pandell.ListShufflers;
 using System.Linq;
 
 namespace Pandell.Tests

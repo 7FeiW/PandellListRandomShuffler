@@ -7,11 +7,12 @@
     <ProjectGuid>{9824A82E-5777-4F75-859D-FF8EB4A0F1B9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pandell</RootNamespace>
-    <AssemblyName>Pandell</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Pandell.RandomShuffledListGeneratorDemo</RootNamespace>
+    <AssemblyName>Pandell.RandomShuffledListGeneratorDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -37,7 +38,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
@@ -51,9 +51,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Pandell.ListRandomShuffler\Pandell.ListShuffler.csproj">
+    <ProjectReference Include="..\ListShufflers\Pandell.ListShufflers.csproj">
       <Project>{4917b2c2-b121-4834-a88e-e9cbe3925f27}</Project>
-      <Name>Pandell.ListShuffler</Name>
+      <Name>Pandell.ListShufflers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
