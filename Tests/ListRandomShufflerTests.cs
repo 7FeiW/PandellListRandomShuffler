@@ -25,7 +25,7 @@ namespace Pandell.Tests
         [Test]
         public void RandomShufflerShouldNotChangeContentOtherThanOrder()
         {
-            int listSize = 10000;
+            const int listSize = 10000;
             var list = Enumerable.Range(1, listSize).ToList();
             var listClone = new List<int>(list);
             ListRandomShuffler.InPlaceShuffle(list);
