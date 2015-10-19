@@ -8,9 +8,9 @@ namespace Pandell
         static void Main(string[] args)
         {
              var shuffledList = RandomShuffledListGenerator.GetShuffledList();
-             foreach (var i in shuffledList)
+             foreach (var num in shuffledList)
              {
-                 Console.WriteLine(i);
+                 Console.WriteLine(num);
              }
         }
     }

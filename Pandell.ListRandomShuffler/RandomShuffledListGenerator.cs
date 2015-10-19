@@ -3,6 +3,10 @@ using System.Linq;
 
 namespace Pandell.ListShuffler
 {
+    /// <summary>
+    /// A Random Shuffled List Generator
+    /// This Class is used to create a list of 10,000 numbers in random order each time it is run. Each number in the list must be unique and be between 1 and 10,000 (inclusive).
+    /// </summary>
     public class RandomShuffledListGenerator
     {
         private const int m_DefaultListMin = 1;
@@ -11,7 +15,7 @@ namespace Pandell.ListShuffler
         public static List<int> GetShuffledList()
         {
             List<int> list = Enumerable.Range(m_DefaultListMin, m_DefaultListMax).ToList();
-            ListRandomShuffler.InPlaceSuffle(list);
+            ListRandomShuffler.InPlaceShuffle(list);
             return list;
         }
     }

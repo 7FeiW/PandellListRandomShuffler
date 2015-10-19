@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace Pandell.ListShuffler
 {
+    /// <summary>
+    /// A List Random Shuffler
+    /// This Class is used to perform inplace random shuffle of a given list
+    /// </summary>
     public class ListRandomShuffler
     {
         public static void InPlaceShuffle<T> (List<T> list)
