@@ -7,12 +7,12 @@ namespace Pandell.RandomShuffledListGeneratorDemo
     {
         static void Main(string[] args)
         {
-             var shuffledList = RandomShuffledListGenerator.GetShuffledIntListOneToTenThousand();
-             foreach (var num in shuffledList)
-             {
-                 Console.WriteLine(num);
-             }
-             Console.ReadKey();
+            var shuffledList = RandomShuffledListGenerator.GetShuffledIntListOneToTenThousand();
+            foreach (var num in shuffledList)
+            {
+                Console.WriteLine(num);
+            }
+            Console.ReadKey();
         }
     }
 }

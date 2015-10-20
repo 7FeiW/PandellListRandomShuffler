@@ -1,5 +1,4 @@
-﻿using System.CodeDom;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using NUnit.Framework;
 using Pandell.ListShufflers;
 using System.Linq;
@@ -47,13 +46,13 @@ namespace Pandell.Tests
         {
             const int expectedNumOfNull = 3;
             const int expectedNumOfStr = 1;
-            string str = "This is not null";
+            const string str = "This is not null";
+
             var list = new List<string>() { null, null, str, null };
             ListRandomShuffler.InPlaceShuffle(list);
 
             var numOfNull = list.Count(i => i == null);
             var numOfStr = list.Count(i => i == str);
-
             Assert.AreEqual(numOfNull, expectedNumOfNull);
             Assert.AreEqual(numOfStr, expectedNumOfStr);
         }
