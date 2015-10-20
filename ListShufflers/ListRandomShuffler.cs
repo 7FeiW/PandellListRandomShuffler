@@ -9,10 +9,15 @@ namespace Pandell.ListShufflers
     /// </summary>
     public class ListRandomShuffler
     {
+        /// <summary>
+        /// Function Implements Durstenfeld's version of Fisher–Yates in place shuffle
+        /// referrence at https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
         public static void InPlaceShuffle<T> (List<T> list)
         {
-            // Durstenfeld's version of Fisher–Yates in place shuffle
-            // referrence at https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
+
             Random rand = new Random(Guid.NewGuid().GetHashCode());
             for (int i = 0; i < list.Count - 1; ++i)
             {
