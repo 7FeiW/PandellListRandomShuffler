@@ -6,13 +6,13 @@
 
 ### The Algorithm
 
-> This solution implemented Durstenfeld's version of Fisher–Yates in place suffle algorithm, time complexity is O(N) and space complexity is O(1)
+> This solution implemented Durstenfeld's version of Fisher–Yates in place suffle algorithm, time complexity is O(N) and space complexity is O(1).
 
 #### Is this Solution 100% Random Shuffle?
-> No, Beacuse of following two reasons
+> No, even though correctness of Fisher–Yates Algroithm can be mathematical proved. However because of following two reasons , this implementation is not able to achive 100% random shuffle. 
 
-* Modulo bias https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Modulo_bias 
-* Pseudorandom generators https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Pseudorandom_generators:_problems_involving_state_space.2C_seeding.2C_and_usage
+* Modulo bias - To generate random numbers in every range from 0–1 to 0–n pretty much guarantees that some of these ranges will not evenly divide the natural range of the random number generator. Thus, the remainders will not always be evenly distributed and, worse yet, the bias will be systematically in favor of small remainders. Referrence at https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Modulo_bias 
+* Problem with pseudorandom generators (This is may or may not happens in C#). Referrence at https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Pseudorandom_generators:_problems_involving_state_space.2C_seeding.2C_and_usage
 
 ### Required Libaray
 * Nunit 2.6 or plus http://www.nunit.org/
@@ -22,14 +22,17 @@
 
 ####This solution contains three projects
 
-* Pandell.RandomShuffledListGeneratorDemo - which contain code to show how to use actual random shuffler
-* Pandell.ListShuffler - class libaray, which contains two classes
-   * Implementations of Fisher–Yates in place suffle algorithm
+* Pandell.RandomShuffledListGeneratorDemo - which contain code to show how to use actual random shuffler.
+* Pandell.ListShuffler - class libaray, which contains two classes.
+   * Implementations of Fisher–Yates in place suffle algorithm.
+   * API -  InPlaceShuffle<T> (List<T> list)
    * A RandomShuffledListGenerator - which can genrate a list of 10,000 numbers in random order and each number in the list   is  unique and be between 1 and 10,000 (inclusive).
-* Pandell.Tests - Unit Tests for Pandell.ListRandomShuffler, requires Nunit 2.6 
+   * API - GetShuffledIntListOneToTenThousand()
+* Pandell.Tests - Unit Tests for Pandell.ListRandomShuffler, requires Nunit 2.6.
 
 ####Build and Run
 
-* Open solution with VS2015 (it should work with VS2013 as well)
-* Build and Run - This soultion is build against .Net 4.5
+* This solution works with VS2015 (it should work with VS2013 as well)
+* To Run RandomShuffledListGeneratorDemo, set RandomShuffledListGeneratorDemo as startup project, build and run.
+* To use ListShuffler in your code, simpley include class library in your code.
 * For unit tests, please use Nunit-GUI 2.6 or plus which is avaiable at http://www.nunit.org/index.php?p=download

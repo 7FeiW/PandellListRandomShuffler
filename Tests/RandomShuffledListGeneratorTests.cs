@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace Pandell.Tests
 {
+    /// <summary>
+    /// Unit Tests for RandomShuffledListGenerator
+    /// </summary>
     [TestFixture]
     public class RandomShuffledListGeneratorTests
     {
@@ -14,14 +17,14 @@ namespace Pandell.Tests
         [Test]
         public void ShuffledListSizeShouldBeTenThousand()
         {
-            var listSize = RandomShuffledListGenerator.GetShuffledList().Count;
+            var listSize = RandomShuffledListGenerator.GetShuffledIntListOneToTenThousand().Count;
             Assert.AreEqual(m_ExpectedListSize, listSize);
         }
 
         [Test]
         public void EachItemInShuffledListShouldBeWithinRange()
         {
-            var shuffledList = RandomShuffledListGenerator.GetShuffledList();
+            var shuffledList = RandomShuffledListGenerator.GetShuffledIntListOneToTenThousand();
             var min = shuffledList.Max();
             var max = shuffledList.Min();
             Assert.LessOrEqual(m_ExpectedItemMin, min);
@@ -31,7 +34,7 @@ namespace Pandell.Tests
         [Test]
         public void EachItemInShuffledListShouldBeUnique()
         {
-            var shuffledList = RandomShuffledListGenerator.GetShuffledList();
+            var shuffledList = RandomShuffledListGenerator.GetShuffledIntListOneToTenThousand();
             Assert.AreEqual(shuffledList.Count, shuffledList.Distinct().Count());
         }
     }

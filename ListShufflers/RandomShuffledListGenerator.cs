@@ -12,7 +12,7 @@ namespace Pandell.ListShufflers
         private const int m_DefaultListMin = 1;
         private const int m_DefaultListMax = 10000;
 
-        public static List<int> GetShuffledList()
+        public static List<int> GetShuffledIntListOneToTenThousand()
         {
             List<int> list = Enumerable.Range(m_DefaultListMin, m_DefaultListMax).ToList();
             ListRandomShuffler.InPlaceShuffle(list);
