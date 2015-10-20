@@ -6,7 +6,7 @@
 
 ### The Algorithm
 
-> This solution implemented Durstenfeld's version of Fisher–Yates in place suffle algorithm, time complexity is O(N) and space complexity is O(1).
+> This solution implemented Durstenfeld's version of Fisher–Yates in place suffle algorithm, time complexity is O(N) and space complexity is O(1).  Referrence at https://en.wikipedia.org/wiki/Fisher–Yates_shuffle.
 
 #### Is this Solution 100% Random Shuffle?
 > No, even though correctness of Fisher–Yates Algroithm can be mathematical proved. However because of following two reasons , this implementation is not able to achive 100% random shuffle. 
