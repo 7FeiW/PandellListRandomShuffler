@@ -15,9 +15,9 @@
 * Problem with pseudorandom generators (This is may or may not happens in C#). Referrence at https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Pseudorandom_generators:_problems_involving_state_space.2C_seeding.2C_and_usage
 
 #### How random is this implementation?
-> Following are two charts shows frequency of each number appears on each index. Those two charts are based on size 100 random shuffle list which conatins 1 to 100. First Chart shows frequency of 1000 such lists and second on based on 10000 such lists.
-[<img src="./Images/freq1.png">]
-[<img src="./Images/freq2.png">]
+> Following are two charts shows frequency of each number appears on each index (Ex. frequency of number 1 apperas in index 1). Those two charts are based on size 100 random shuffle list which conatins 1 to 100. First Chart shows frequency of 1000 such lists and second on based on 10000 such lists.
+<img src="./Images/freq1.png">
+<img src="./Images/freq2.png">
 
 ### Required Libaray
 * Nunit 2.6 or plus http://www.nunit.org/

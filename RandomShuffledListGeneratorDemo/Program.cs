@@ -12,7 +12,7 @@ namespace Pandell.RandomShuffledListGeneratorDemo
              {
                  Console.WriteLine(num);
              }
-            Console.ReadKey();
+             Console.ReadKey();
         }
     }
 }
