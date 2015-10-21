@@ -43,6 +43,6 @@ Referrence at https://en.wikipedia.org/wiki/Fisher–Yates_shuffle.
 
 ####Build and Run
 * This solution works with VS2015 (it should work with VS2013 as well)
-* To Run RandomShuffledListGeneratorDemo, set RandomShuffledListGeneratorDemo as startup project, build and run.
+* To Run RandomShuffledListGeneratorDemo,<strong> set RandomShuffledListGeneratorDemo as startup project</strong>, build and run.
 * To use ListShuffler in your code, simpley include class library in your code.
-* For unit tests, please use Nunit-GUI 2.6 or plus which is avaiable at http://www.nunit.org/index.php?p=download, and select Pandell.Tests.dll
+* For unit tests, please use Nunit-GUI 2.6 or plus which is avaiable at http://www.nunit.org/index.php?p=download
