@@ -1,12 +1,17 @@
 ## A Solution for Random Shuffle List
 
-### The Requirements:
+### The Requirement
 
-> Please write a program that generates a list of 10,000 numbers in random order each time it is run. Each number in the list must be unique and be between 1 and 10,000 (inclusive).
+> A program that generates a list of 10,000 numbers in random order each time it is run. Each number in the list must be unique and be between 1 and 10,000 (inclusive).
 
 ### The Algorithm
 
-> This solution implemented Durstenfeld's version of Fisher–Yates in place suffle algorithm, time complexity is O(N) and space complexity is O(1).  Referrence at https://en.wikipedia.org/wiki/Fisher–Yates_shuffle.
+> This solution implemented Durstenfeld's version of Fisher–Yates in place suffle algorithm, time complexity is O(N) and space complexity is O(1).  
+<pre><code>	To shuffle an array a of n elements (indices 0..n-1):
+  				for i from 0 to n − 2 do
+       				j ← random integer such that i ≤ j < n
+       					exchange a[j] and a[i]</pre></code>
+Referrence at https://en.wikipedia.org/wiki/Fisher–Yates_shuffle.
 
 #### Is this Solution 100% Random Shuffle?
 > No, even though correctness of Fisher–Yates Algroithm can be mathematical proved. However because of following two reasons , this implementation is not able to achive 100% random shuffle. 
@@ -18,10 +23,7 @@
 > Following are two charts shows frequency of each number appears on each index (Ex. frequency of number 1 apperas in index 1). Those two charts are based on size 100 random shuffle list which conatins 1 to 100. First Chart shows frequency of 1000 such lists and second on based on 10000 such lists.
 <img src="./Images/freq1.png">
 <img src="./Images/freq2.png">
-
-### Required Libaray
-* Nunit 2.6 or plus http://www.nunit.org/
-* .Net 4.5
+> In a prefect idea case, probably of each number appears on each index should be equal. However dude to two limitations disscused above (which are impossible to avoid because of natural of computering), this implementation is not perfect yet.
 
 ### Usage
 
@@ -35,8 +37,11 @@
    * API - GetShuffledIntListOneToTenThousand()
 * Pandell.Tests - Unit Tests for Pandell.ListRandomShuffler, requires Nunit 2.6.
 
-####Build and Run
+#### Required Libaray
+* Nunit 2.6 or plus http://www.nunit.org/
+* .Net 4.5
 
+####Build and Run
 * This solution works with VS2015 (it should work with VS2013 as well)
 * To Run RandomShuffledListGeneratorDemo, set RandomShuffledListGeneratorDemo as startup project, build and run.
 * To use ListShuffler in your code, simpley include class library in your code.
