@@ -58,7 +58,7 @@ namespace Pandell.Tests
         }
 
         [Test]
-        public void RandomShufflerShouldNotChangeContentOtherThanOrder()
+        public void RandomShufflerShouldNotChangeValueTypeListContentOtherThanOrder()
         {
             const int listSize = 10000;
             var list = Enumerable.Range(1, listSize).ToList();
@@ -76,7 +76,7 @@ namespace Pandell.Tests
         /// Use List of String as input, because string is referrence type this test should prove if random shuffle function work well with referrence type
         /// </summary>
         [Test]
-        public void RandomShufflerShouldNotChangeStringListContentOtherThanOrder()
+        public void RandomShufflerShouldNotChangeReffernceTypeListContentOtherThanOrder()
         {
             const int listSize = 4;
             var list = new List<string>()
